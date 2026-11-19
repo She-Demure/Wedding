@@ -183,7 +183,7 @@ export default function App() {
       {introVisible && (
         <section
           className={`invitation-intro ${isOpening ? "intro-opening" : ""}`}
-          aria-label="Open Sheila Marie and Mark Joel's wedding invitation"
+          aria-label="Open wedding invitation"
           onAnimationEnd={(event) => {
             if (isOpening && event.currentTarget === event.target) setIntroVisible(false);
           }}
@@ -195,22 +195,16 @@ export default function App() {
             <img src={floralImage} alt="" />
           </div>
           <div className="intro-content">
-            <p className="intro-kicker">Save the date</p>
-            <div className="intro-names">
-              <span className="intro-person gold-shine">Sheila Marie</span>
-              <span className="intro-join">&amp;</span>
-              <span className="intro-person gold-shine">Mark Joel</span>
-            </div>
-            <p className="intro-date">26 · 11 · 2026</p>
+            <p className="intro-kicker">You are invited</p>
             <button
               className="seal-button"
               onClick={() => setIsOpening(true)}
               aria-label="Open the invitation"
             >
-              <span className="seal-ring">
+              <span className="seal-ring" aria-hidden="true">
                 <b>S</b>
                 <i>&amp;</i>
-                <b>M</b>
+                <b>J</b>
               </span>
             </button>
             <button className="open-label" onClick={() => setIsOpening(true)}>
