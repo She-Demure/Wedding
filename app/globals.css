@@ -913,7 +913,7 @@ footer i {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  text-align: right;
+  text-align: center;
 }
 
 .timeline-mark {
@@ -959,7 +959,8 @@ footer i {
 }
 
 .timeline article > div:last-child {
-  padding-left: 7px;
+  padding-left: 0;
+  text-align: center;
 }
 
 .timeline p {
