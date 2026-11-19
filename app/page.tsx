@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 const floralImage =
   "https://images.unsplash.com/photo-1699830010147-8dc65aff2c29?auto=format&fit=crop&w=1200&q=90";
@@ -18,6 +19,34 @@ function FloatingPetals() {
   );
 }
 
+function ScrollEffects() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const filter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+
+  return (
+    <>
+      <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
+      <motion.div className="scroll-decor" style={{ filter }} aria-hidden="true">
+        <div className="ambient-glow ambient-one" />
+        <div className="ambient-glow ambient-two" />
+        <div className="background-floral background-floral-left">
+          <img src={backgroundFloralImage} alt="" />
+        </div>
+        <div className="background-floral background-floral-right">
+          <img src={backgroundFloralImage} alt="" />
+        </div>
+        <div className="gold-background-effect" />
+        <FloatingPetals />
+      </motion.div>
+    </>
+  );
+}
+
 export default function App() {
   const [rsvpOpen, setRsvpOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -26,16 +55,7 @@ export default function App() {
 
   return (
     <main className="invitation-page">
-      <div className="ambient-glow ambient-one" />
-      <div className="ambient-glow ambient-two" />
-      <div className="background-floral background-floral-left" aria-hidden="true">
-        <img src={backgroundFloralImage} alt="" />
-      </div>
-      <div className="background-floral background-floral-right" aria-hidden="true">
-        <img src={backgroundFloralImage} alt="" />
-      </div>
-      <div className="gold-background-effect" aria-hidden="true" />
-      <FloatingPetals />
+      <ScrollEffects />
 
       <div className="wedding-journey">
         <section className="story-section scroll-reveal" id="our-story">
