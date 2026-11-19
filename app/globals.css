@@ -869,7 +869,8 @@ footer i {
 
 .schedule-section {
   margin-top: 24px;
-  padding: 92px 80px 96px;
+  min-height: 760px;
+  padding: 108px 80px 132px;
   background:
     radial-gradient(circle at 12% 16%, rgba(215, 193, 158, 0.22), transparent 22%), #ede2d1;
   box-shadow: 0 28px 65px rgba(77, 54, 29, 0.12);
@@ -888,12 +889,12 @@ footer i {
 
 .timeline {
   max-width: 760px;
-  margin: 58px auto 0;
+  margin: 72px auto 0;
 }
 
 .timeline article {
   display: grid;
-  min-height: 98px;
+  min-height: 148px;
   grid-template-columns: 90px 46px 1fr;
   align-items: start;
 }
@@ -1986,11 +1987,18 @@ form .button {
     padding: 72px 30px;
   }
 
+  .schedule-section {
+    min-height: 0;
+    padding-top: 86px;
+    padding-bottom: 96px;
+  }
+
   .timeline {
-    margin-top: 48px;
+    margin-top: 58px;
   }
 
   .timeline article {
+    min-height: 136px;
     grid-template-columns: 66px 35px 1fr;
   }
 
