@@ -32,11 +32,6 @@ function ScrollEffects() {
     restDelta: 0.001,
   });
   const filter = useTransform(sceneProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
-  const backgroundColor = useTransform(
-    sceneProgress,
-    [0, 0.28, 0.58, 0.82, 1],
-    ["#d7c5aa", "#eadbc2", "#d8d5c7", "#e5cfc2", "#c8c9b5"],
-  );
   const farLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-20vh"]);
   const middleLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-44vh"]);
   const nearLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-78vh"]);
@@ -45,7 +40,7 @@ function ScrollEffects() {
   return (
     <>
       <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
-      <motion.div className="scroll-decor" style={{ filter, backgroundColor }} aria-hidden="true">
+      <motion.div className="scroll-decor" style={{ filter }} aria-hidden="true">
         <div className="ambient-glow ambient-one" />
         <div className="ambient-glow ambient-two" />
         <motion.div className="background-floral background-floral-left" style={{ y: farLayerY, opacity: farLayerOpacity }}>
@@ -99,8 +94,8 @@ export default function App() {
                 <i />
               </div>
               <div>
-                <h3>Guest Arrival &amp; Registration</h3>
-                <p>Guests arrive at the venue, greet the couple’s families, and settle into their seats in preparation for the ceremony.</p>
+                <h3>Guest Arrival</h3>
+                <p>Welcome and registration of guests.</p>
                 <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
               </div>
             </article>
@@ -111,7 +106,7 @@ export default function App() {
               </div>
               <div>
                 <h3>The Ceremony</h3>
-                <p>The celebration of love begins! Witness the couple exchange their vows and promises of forever as they begin their journey together as husband and wife.</p>
+                <p>Witness the couple exchange their vows and say “I do.”</p>
                 <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
               </div>
             </article>
@@ -121,8 +116,8 @@ export default function App() {
                 <i />
               </div>
               <div>
-                <h3>Wedding Reception &amp; Celebration</h3>
-                <p>Join us as we continue the celebration with a delightful meal, heartfelt messages, fun moments, and joyful memories with family and friends.</p>
+                <h3>Wedding Reception</h3>
+                <p>Enjoy a lovely meal and celebrate with the newlyweds!</p>
                 <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
               </div>
             </article>
