@@ -27,11 +27,16 @@ function ScrollEffects() {
     restDelta: 0.001,
   });
   const filter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.28, 0.58, 0.82, 1],
+    ["#d7c5aa", "#eadbc2", "#d8d5c7", "#e5cfc2", "#c8c9b5"],
+  );
 
   return (
     <>
       <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
-      <motion.div className="scroll-decor" style={{ filter }} aria-hidden="true">
+      <motion.div className="scroll-decor" style={{ filter, backgroundColor }} aria-hidden="true">
         <div className="ambient-glow ambient-one" />
         <div className="ambient-glow ambient-two" />
         <div className="background-floral background-floral-left">
