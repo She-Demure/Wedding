@@ -902,12 +902,13 @@ footer i {
 .timeline article {
   display: grid;
   min-height: 184px;
-  grid-template-columns: 108px 54px minmax(0, 1fr);
+  grid-template-columns: 54px minmax(0, 1fr);
   align-items: start;
 }
 
-.timeline article > span {
-  padding-top: 4px;
+.timeline-time {
+  display: block;
+  margin: 0 0 8px;
   color: #987344;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
@@ -2099,10 +2100,10 @@ form .button {
 
   .timeline article {
     min-height: 154px;
-    grid-template-columns: 72px 40px minmax(0, 1fr);
+    grid-template-columns: 40px minmax(0, 1fr);
   }
 
-  .timeline article > span {
+  .timeline-time {
     font-size: 10px;
   }
 
@@ -2185,10 +2186,10 @@ form .button {
 
   .timeline article {
     min-height: 110px;
-    grid-template-columns: 56px 30px 1fr;
+    grid-template-columns: 30px minmax(0, 1fr);
   }
 
-  .timeline article > span {
+  .timeline-time {
     letter-spacing: 0.05em;
   }
 

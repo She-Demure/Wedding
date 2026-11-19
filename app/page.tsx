@@ -98,33 +98,33 @@ export default function App() {
           <div className="timeline-layout">
             <div className="timeline">
               <article>
-                <span>10:30 AM</span>
                 <div className="timeline-mark">
                   <i />
                 </div>
                 <div>
+                  <span className="timeline-time">10:30 AM</span>
                   <h3>Guest Arrival</h3>
                   <p>Welcome and registration of guests.</p>
                   <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
                 </div>
               </article>
               <article>
-                <span>11:00 AM</span>
                 <div className="timeline-mark">
                   <i />
                 </div>
                 <div>
+                  <span className="timeline-time">11:00 AM</span>
                   <h3>The Ceremony</h3>
                   <p>Witness the couple exchange their vows and say “I do.”</p>
                   <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
                 </div>
               </article>
               <article>
-                <span>12:00 NN</span>
                 <div className="timeline-mark">
                   <i />
                 </div>
                 <div>
+                  <span className="timeline-time">12:00 NN</span>
                   <h3>Wedding Reception</h3>
                   <p>Enjoy a lovely meal and celebrate with the newlyweds!</p>
                   <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
