@@ -1443,11 +1443,14 @@ footer i {
 }
 
 .intro-kicker {
-  margin: 0 0 34px;
-  color: #6e5739;
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: 0.34em;
+  margin: 0 0 38px;
+  color: #a77d3d;
+  font-family: "Great Vibes", "Brush Script MT", cursive;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-transform: none;
 }
 
 .intro-names {
@@ -1484,8 +1487,8 @@ footer i {
 .seal-button {
   position: relative;
   display: grid;
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   margin: 0;
   place-items: center;
   border-radius: 50%;
@@ -1524,9 +1527,9 @@ footer i {
 .seal-ring {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
+  font-size: 31px;
   font-style: italic;
   font-weight: 500;
 }
@@ -1537,7 +1540,7 @@ footer i {
 
 .seal-ring i {
   color: #e3c28c;
-  font-size: 15px;
+  font-size: 23px;
 }
 
 .open-label {
@@ -1918,8 +1921,21 @@ form .button {
   }
 
   .intro-kicker {
-    margin-bottom: 28px;
-    font-size: 12px;
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+
+  .seal-button {
+    width: 100px;
+    height: 100px;
+  }
+
+  .seal-ring {
+    font-size: 28px;
+  }
+
+  .seal-ring i {
+    font-size: 21px;
   }
 
   .intro-date {
