@@ -140,6 +140,16 @@ export default function App() {
           <div className="sponsors-message">
             <span className="sponsor-ornament" aria-hidden="true">✦</span>
             <p>With love and gratitude for the guidance, support, and blessings of our principal sponsors.</p>
+            <div className="sponsor-pairs">
+              <div className="sponsor-pair">
+                <span>Mrs. Jinky Q. De Vera</span>
+                <span>Mr. Rene C. De Vera</span>
+              </div>
+              <div className="sponsor-pair">
+                <span>Mrs. Angelica Z. Tamayo</span>
+                <span>Mr. Armando M. Tamayo</span>
+              </div>
+            </div>
             <span className="sponsor-caption">A cherished part of our celebration</span>
           </div>
         </section>

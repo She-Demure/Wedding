@@ -1010,6 +1010,31 @@ footer i {
   line-height: 1.5;
 }
 
+.sponsor-pairs {
+  display: grid;
+  width: min(100%, 720px);
+  margin-top: 35px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.sponsor-pair {
+  display: flex;
+  padding: 18px 12px;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  border-top: 1px solid rgba(167, 126, 74, 0.35);
+  border-bottom: 1px solid rgba(167, 126, 74, 0.35);
+  color: #6a553b;
+  font-size: 20px;
+}
+
+.sponsor-pair span + span {
+  color: #816b4d;
+  font-style: italic;
+}
+
 .sponsor-caption {
   margin-top: 15px;
   color: #a18156;
@@ -1017,6 +1042,18 @@ footer i {
   font-size: 9px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+@media (max-width: 620px) {
+  .sponsor-pairs {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sponsor-pair {
+    padding: 14px 8px;
+    font-size: 18px;
+  }
 }
 
 .detail-grid {
