@@ -984,6 +984,30 @@ footer i {
   letter-spacing: 0.04em;
 }
 
+.venue-link {
+  display: inline-flex;
+  min-height: 30px;
+  margin-top: 10px;
+  padding: 6px 11px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(160, 123, 68, 0.56);
+  border-radius: 999px;
+  color: #765a31;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.venue-link:hover {
+  border-color: #98713a;
+  background: #a47f48;
+  color: #fffaf1;
+}
+
 .timeline-photo {
   position: relative;
   width: 100%;
