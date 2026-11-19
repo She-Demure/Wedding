@@ -126,43 +126,13 @@ export default function App() {
 
         <section className="details-section" aria-labelledby="details-title">
           <div className="section-heading">
-            <p className="section-kicker">The finer details</p>
-            <h2 id="details-title">For Our Guests</h2>
+            <p className="section-kicker">With heartfelt gratitude</p>
+            <h2 id="details-title">Principal Sponsors</h2>
           </div>
-          <div className="detail-grid">
-            <article>
-              <span className="detail-number">01</span>
-              <div className="detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40">
-                  <path d="M10 31h20M14 31V17l6-8 6 8v14M17 21h6M17 25h6" />
-                </svg>
-              </div>
-              <h3>Stay</h3>
-              <p>A room block is reserved at The Willow House, minutes from the estate.</p>
-              <span className="detail-meta">Napa · California</span>
-            </article>
-            <article>
-              <span className="detail-number">02</span>
-              <div className="detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40">
-                  <path d="M12 31c2-7 3-13 8-22 5 9 6 15 8 22M15 23h10M13 27h14" />
-                </svg>
-              </div>
-              <h3>Attire</h3>
-              <p>Formal garden attire in warm neutrals, soft pastels, and summer tones.</p>
-              <span className="detail-meta">Elegant · Outdoor</span>
-            </article>
-            <article>
-              <span className="detail-number">03</span>
-              <div className="detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40">
-                  <path d="M9 26h22M12 26l2-10h12l2 10M16 16l2-5h4l2 5M13 30h1M26 30h1" />
-                </svg>
-              </div>
-              <h3>Travel</h3>
-              <p>Complimentary shuttles will depart from our partner hotels at three o’clock.</p>
-              <span className="detail-meta">Transport provided</span>
-            </article>
+          <div className="sponsors-message">
+            <span className="sponsor-ornament" aria-hidden="true">✦</span>
+            <p>With love and gratitude for the guidance, support, and blessings of our principal sponsors.</p>
+            <span className="sponsor-caption">A cherished part of our celebration</span>
           </div>
         </section>
 
