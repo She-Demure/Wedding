@@ -231,11 +231,11 @@ export default function App() {
           <div className="closing-content">
             <p className="section-kicker">With love and anticipation</p>
             <div className="closing-monogram">
-              S <span>&amp;</span> M
+              S <span>&amp;</span> J
             </div>
             <h2>We hope you’ll join us</h2>
             <p>
-              Your presence would make our celebration complete. Kindly respond by April 21, 2026.
+              Your presence would make our celebration complete. Join us on November 26, 2026.
             </p>
             <button className="button button-primary" onClick={() => setRsvpOpen(true)}>
               RSVP to our wedding
@@ -294,7 +294,7 @@ export default function App() {
             {submitted ? (
               <div className="confirmation">
                 <div className="confirmation-mark">
-                  S <span>&amp;</span> M
+                  S <span>&amp;</span> J
                 </div>
                 <p className="modal-kicker">With gratitude</p>
                 <h2 id="rsvp-title">Your reply is received</h2>
@@ -305,9 +305,8 @@ export default function App() {
               </div>
             ) : (
               <>
-                <p className="modal-kicker">Répondez s’il vous plaît</p>
                 <h2 id="rsvp-title">Will you join us?</h2>
-                <p>Please reply by the twenty-first of April.</p>
+                <p>The twenty-sixth of November, 2026.</p>
                 <form
                   onSubmit={(event) => {
                     event.preventDefault();
