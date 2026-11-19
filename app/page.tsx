@@ -69,7 +69,7 @@ export default function App() {
       <div className="wedding-journey">
         <section className="couple-hero" aria-label="Wedding date for Sheila Marie and Mark Joel">
           <p className="section-kicker">Save the date</p>
-          <h1 className="hero-names"><span>Sheila Marie</span><i>&amp;</i><span>Mark Joel</span></h1>
+          <h1 className="hero-names"><span className="gold-shine">Sheila Marie</span><i>&amp;</i><span className="gold-shine">Mark Joel</span></h1>
           <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
           <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
           <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
@@ -181,7 +181,9 @@ export default function App() {
           <div className="intro-content">
             <p className="intro-kicker">Save the date</p>
             <div className="intro-names">
-              Sheila Marie <span>&amp;</span> Mark Joel
+              <span className="intro-person gold-shine">Sheila Marie</span>
+              <span className="intro-join">&amp;</span>
+              <span className="intro-person gold-shine">Mark Joel</span>
             </div>
             <p className="intro-date">26 · 11 · 2026</p>
             <button

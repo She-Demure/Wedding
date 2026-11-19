@@ -659,7 +659,7 @@ footer i {
 
 .couple-hero > .section-kicker {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 0.34em;
 }
 
@@ -677,11 +677,27 @@ footer i {
 }
 
 .hero-names i {
-  margin: 22px 0 18px;
+  margin: 24px 0 20px;
   color: #a68759;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 34px;
+  font-size: 52px;
   font-weight: 400;
+}
+
+.gold-shine {
+  color: #b18a4b;
+  background: linear-gradient(108deg, #98702f 8%, #caa65e 28%, #fff0b4 43%, #a97d38 54%, #efd58e 68%, #98702f 90%);
+  background-size: 240% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 5.2s ease-in-out infinite;
+  filter: drop-shadow(0 2px 7px rgba(137, 100, 46, 0.14));
+}
+
+@keyframes gold-shimmer {
+  0%, 18% { background-position: 100% 50%; }
+  68%, 100% { background-position: 0% 50%; }
 }
 
 .hero-ornament {
@@ -1335,7 +1351,7 @@ footer i {
 .intro-kicker {
   margin: 0 0 34px;
   color: #6e5739;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: 0.34em;
 }
@@ -1349,14 +1365,18 @@ footer i {
   text-shadow: 0 3px 18px rgba(80, 54, 27, 0.22);
 }
 
-.intro-names span {
+.intro-names .intro-join {
   display: inline-block;
   margin: 0 10px;
   color: #9a7443;
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.4em;
+  font-size: 0.55em;
   font-style: italic;
   transform: translateY(-7px);
+}
+
+.intro-names .intro-person {
+  color: #b18a4b;
 }
 
 .intro-date {
@@ -1785,7 +1805,7 @@ form .button {
 
   .couple-hero > .section-kicker {
     margin-bottom: 24px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .hero-names {
@@ -1884,6 +1904,10 @@ form .button {
   .intro-names span {
     margin: -3px 0 -7px;
     transform: none;
+  }
+
+  .intro-names .intro-join {
+    margin: 0 0 4px;
   }
 
   .petal-3,
