@@ -984,7 +984,8 @@ footer i {
 
 .sponsors-message {
   display: flex;
-  max-width: 560px;
+  width: 100%;
+  max-width: 960px;
   margin: 48px auto 0;
   align-items: center;
   flex-direction: column;
@@ -1012,7 +1013,7 @@ footer i {
 
 .sponsor-pairs {
   display: grid;
-  width: min(100%, 860px);
+  width: 100%;
   margin-top: 42px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 34px;
