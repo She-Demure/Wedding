@@ -741,14 +741,14 @@ footer i {
   margin: 16px 0 8px;
   align-items: flex-start;
   justify-content: center;
-  gap: clamp(18px, 4vw, 42px);
+  gap: clamp(8px, 2vw, 20px);
   color: #806849;
   font-family: Montserrat, Arial, sans-serif;
 }
 
 .countdown-unit {
   display: flex;
-  min-width: 62px;
+  min-width: 48px;
   align-items: center;
   flex-direction: column;
   gap: 4px;
@@ -1996,11 +1996,11 @@ form .button {
   }
 
   .wedding-countdown {
-    gap: clamp(10px, 4vw, 24px);
+    gap: 8px;
   }
 
   .countdown-unit {
-    min-width: 52px;
+    min-width: 42px;
   }
 
   .countdown-unit strong {
