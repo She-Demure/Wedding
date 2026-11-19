@@ -188,12 +188,6 @@ export default function App() {
             if (isOpening && event.currentTarget === event.target) setIntroVisible(false);
           }}
         >
-          <div className="intro-floral intro-floral-left" aria-hidden="true">
-            <img src={floralImage} alt="" />
-          </div>
-          <div className="intro-floral intro-floral-right" aria-hidden="true">
-            <img src={floralImage} alt="" />
-          </div>
           <div className="intro-content">
             <p className="intro-kicker">You are invited</p>
             <button

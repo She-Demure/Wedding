@@ -1401,8 +1401,8 @@ footer i {
   overflow: hidden;
   place-items: center;
   background:
-    linear-gradient(rgba(55, 43, 28, 0.18), rgba(55, 43, 28, 0.18)),
-    radial-gradient(circle at 50% 45%, #f1e8d9 0, #d8c3a4 64%, #bda17a 100%);
+    linear-gradient(rgba(248, 241, 226, 0.4), rgba(233, 218, 191, 0.46)),
+    url("/wedding-rings.jpg") center / cover no-repeat;
 }
 
 .invitation-intro::before {
