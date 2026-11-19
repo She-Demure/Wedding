@@ -1012,22 +1012,22 @@ footer i {
 
 .sponsor-pairs {
   display: grid;
-  width: min(100%, 720px);
-  margin-top: 35px;
+  width: min(100%, 860px);
+  margin-top: 42px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  gap: 34px;
 }
 
 .sponsor-pair {
   position: relative;
   display: flex;
-  min-height: 126px;
-  padding: 24px 18px;
+  min-height: 190px;
+  padding: 34px 24px;
   align-items: center;
   flex-direction: column;
   gap: 7px;
   border: 1px solid rgba(167, 126, 74, 0.4);
-  border-radius: 3px;
+  border-radius: 14px;
   background: linear-gradient(145deg, rgba(255, 253, 248, 0.82), rgba(241, 232, 215, 0.74));
   box-shadow: 0 12px 28px rgba(88, 64, 36, 0.09), inset 0 0 0 4px rgba(255, 255, 255, 0.28);
   color: #6a553b;
@@ -1057,12 +1057,12 @@ footer i {
 @media (max-width: 620px) {
   .sponsor-pairs {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 18px;
   }
 
   .sponsor-pair {
-    min-height: 112px;
-    padding: 20px 12px;
+    min-height: 160px;
+    padding: 28px 18px;
     font-size: 18px;
   }
 }
