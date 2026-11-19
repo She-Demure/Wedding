@@ -785,7 +785,7 @@ footer i {
 }
 
 .hero-date-caption {
-  margin: 20px 0 0;
+  margin: 10px 0 0;
   color: #8b785d;
   font-size: 25px;
   font-style: italic;
@@ -2013,7 +2013,7 @@ form .button {
   }
 
   .hero-date-caption {
-    margin-top: 16px;
+    margin-top: 8px;
     font-size: 21px;
   }
 
