@@ -132,14 +132,14 @@
   bottom: -12%;
   left: -9%;
   mask-image: radial-gradient(ellipse at 20% 72%, #000 0, #000 32%, transparent 73%);
-  transform: rotate(8deg);
+  rotate: 8deg;
 }
 
 .background-floral-right {
   top: -14%;
   right: -10%;
   mask-image: radial-gradient(ellipse at 26% 28%, #000 0, #000 30%, transparent 72%);
-  transform: rotate(188deg);
+  rotate: 188deg;
 }
 
 .gold-background-effect {

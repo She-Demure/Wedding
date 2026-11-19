@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform, type MotionValue } from "motion/react";
 
 const floralImage =
   "https://images.unsplash.com/photo-1699830010147-8dc65aff2c29?auto=format&fit=crop&w=1200&q=90";
@@ -9,13 +9,13 @@ const backgroundFloralImage =
   "https://images.unsplash.com/photo-1651154872716-0f7a409a4dd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHx3aGl0ZSUyMGZsb3dlcnMlMjBnb2xkJTIwd2VkZGluZyUyMGVsZWdhbnQlMjBjcmVhbSUyMGJhY2tncm91bmR8ZW58MXx8fHwxNzk1MDgzNjU2fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const estateImage = "/couple-red-thread.jpg";
 
-function FloatingPetals() {
+function FloatingPetals({ y }: { y: MotionValue<string> }) {
   return (
-    <div className="petal-field" aria-hidden="true">
+    <motion.div className="petal-field" style={{ y }} aria-hidden="true">
       {Array.from({ length: 12 }, (_, index) => (
         <i className={`petal petal-${index + 1}`} key={index} />
       ))}
-    </div>
+    </motion.div>
   );
 }
 
@@ -26,22 +26,36 @@ function ScrollEffects() {
     damping: 30,
     restDelta: 0.001,
   });
-  const filter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const sceneProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const filter = useTransform(sceneProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const backgroundColor = useTransform(
+    sceneProgress,
+    [0, 0.28, 0.58, 0.82, 1],
+    ["#d7c5aa", "#eadbc2", "#d8d5c7", "#e5cfc2", "#c8c9b5"],
+  );
+  const farLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-20vh"]);
+  const middleLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-44vh"]);
+  const nearLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-78vh"]);
+  const farLayerOpacity = useTransform(sceneProgress, [0, 0.5, 1], [0.34, 0.24, 0.12]);
 
   return (
     <>
       <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
-      <motion.div className="scroll-decor" style={{ filter }} aria-hidden="true">
+      <motion.div className="scroll-decor" style={{ filter, backgroundColor }} aria-hidden="true">
         <div className="ambient-glow ambient-one" />
         <div className="ambient-glow ambient-two" />
-        <div className="background-floral background-floral-left">
+        <motion.div className="background-floral background-floral-left" style={{ y: farLayerY, opacity: farLayerOpacity }}>
           <img src={backgroundFloralImage} alt="" />
-        </div>
-        <div className="background-floral background-floral-right">
+        </motion.div>
+        <motion.div className="background-floral background-floral-right" style={{ y: middleLayerY }}>
           <img src={backgroundFloralImage} alt="" />
-        </div>
-        <div className="gold-background-effect" />
-        <FloatingPetals />
+        </motion.div>
+        <motion.div className="gold-background-effect" style={{ y: farLayerY }} />
+        <FloatingPetals y={nearLayerY} />
       </motion.div>
     </>
   );
