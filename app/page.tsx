@@ -71,8 +71,8 @@ export default function App() {
           <p className="section-kicker">Save the date</p>
           <h1 className="hero-names"><span>Sheila Marie</span><i>&amp;</i><span>Mark Joel</span></h1>
           <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
-          <p className="hero-date">21 <i>·</i> 06 <i>·</i> 2026</p>
-          <p className="hero-date-caption">Sunday · The twenty-first of June</p>
+          <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
+          <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
         </section>
 
         <section className="story-section" id="our-story">
@@ -179,11 +179,11 @@ export default function App() {
             <img src={floralImage} alt="" />
           </div>
           <div className="intro-content">
-            <p className="intro-kicker">You are cordially invited</p>
+            <p className="intro-kicker">Save the date</p>
             <div className="intro-names">
               Sheila Marie <span>&amp;</span> Mark Joel
             </div>
-            <p className="intro-date">21 · 06 · 2026</p>
+            <p className="intro-date">26 · 11 · 2026</p>
             <button
               className="seal-button"
               onClick={() => setIsOpening(true)}
