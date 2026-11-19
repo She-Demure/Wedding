@@ -663,6 +663,26 @@ footer i {
   letter-spacing: 0.34em;
 }
 
+.calendar-save-button {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.calendar-save-button:hover {
+  border-color: rgba(154, 120, 74, 0.42);
+  background: rgba(255, 251, 242, 0.48);
+  color: #755834;
+}
+
+.calendar-save-button:focus-visible {
+  outline: 2px solid #9a784a;
+  outline-offset: 3px;
+}
+
 .hero-names {
   display: flex;
   margin: 40px 0 38px;

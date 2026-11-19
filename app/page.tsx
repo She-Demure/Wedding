@@ -9,6 +9,34 @@ const backgroundFloralImage =
   "https://images.unsplash.com/photo-1651154872716-0f7a409a4dd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHx3aGl0ZSUyMGZsb3dlcnMlMjBnb2xkJTIwd2VkZGluZyUyMGVsZWdhbnQlMjBjcmVhbSUyMGJhY2tncm91bmR8ZW58MXx8fHwxNzk1MDgzNjU2fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const estateImage = "/couple-red-thread.jpg";
 
+function downloadCalendarInvite() {
+  const calendarEvent = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Sheila Marie and Mark Joel//Wedding Invitation//EN",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    "UID:sheila-marie-mark-joel-wedding-20261126@invitation",
+    "DTSTAMP:20261120T000000Z",
+    "DTSTART;VALUE=DATE:20261126",
+    "DTEND;VALUE=DATE:20261127",
+    "SUMMARY:Sheila Marie & Mark Joel — Wedding",
+    "DESCRIPTION:10:30 AM Guest Arrival at 3rd Floor, Mangaladal Municipal Hall\\n11:00 AM Wedding Ceremony at 3rd Floor, Mangaladal Municipal Hall\\n12:00 NN Wedding Reception at Kalye Tres Restaurant",
+    "LOCATION:Mangaladal Municipal Hall and Kalye Tres Restaurant",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+  const file = new Blob([calendarEvent], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(file);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "sheila-marie-mark-joel-wedding.ics";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 function FloatingPetals({ y }: { y: MotionValue<string> }) {
   return (
     <motion.div className="petal-field" style={{ y }} aria-hidden="true">
@@ -68,7 +96,9 @@ export default function App() {
 
       <div className="wedding-journey">
         <section className="couple-hero" aria-label="Wedding date for Sheila Marie and Mark Joel">
-          <p className="section-kicker">Save the date</p>
+          <button className="section-kicker calendar-save-button" type="button" onClick={downloadCalendarInvite}>
+            Save the date
+          </button>
           <h1 className="hero-names"><span className="gold-shine">Sheila Marie</span><i>&amp;</i><span className="gold-shine">Mark Joel</span></h1>
           <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
           <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
