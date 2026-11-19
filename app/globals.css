@@ -624,8 +624,9 @@ footer i {
 .couple-hero {
   position: relative;
   display: flex;
-  min-height: 500px;
+  min-height: 590px;
   margin-bottom: 24px;
+  padding: 82px 28px 48px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -658,28 +659,29 @@ footer i {
 
 .hero-names {
   display: flex;
-  margin: 19px 0 17px;
+  margin: 30px 0 28px;
   align-items: center;
   flex-direction: column;
   color: #b18a4b;
   font-family: "Great Vibes", "Brush Script MT", cursive;
-  font-size: clamp(86px, 12vw, 140px);
+  font-size: clamp(96px, 14vw, 158px);
   font-weight: 400;
   line-height: 0.83;
   text-shadow: 0 2px 10px rgba(137, 100, 46, 0.12);
 }
 
 .hero-names i {
-  margin: 11px 0 8px;
+  margin: 17px 0 13px;
   color: #a68759;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 400;
 }
 
 .hero-ornament {
   display: flex;
-  width: 148px;
+  width: 180px;
+  margin-bottom: 8px;
   align-items: center;
   gap: 11px;
   color: #a98756;
@@ -697,10 +699,10 @@ footer i {
 }
 
 .hero-date {
-  margin: 16px 0 0;
+  margin: 24px 0 0;
   color: #62503b;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 29px;
+  font-size: 34px;
   font-weight: 600;
   letter-spacing: 0.24em;
 }
@@ -712,9 +714,9 @@ footer i {
 }
 
 .hero-date-caption {
-  margin: 8px 0 0;
+  margin: 14px 0 0;
   color: #8b785d;
-  font-size: 19px;
+  font-size: 22px;
   font-style: italic;
 }
 
@@ -1325,9 +1327,9 @@ footer i {
 }
 
 .intro-kicker {
-  margin: 0 0 26px;
+  margin: 0 0 34px;
   color: #6e5739;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.34em;
 }
@@ -1352,9 +1354,9 @@ footer i {
 }
 
 .intro-date {
-  margin: 18px 0 30px;
+  margin: 25px 0 42px;
   color: #b18a4b;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.43em;
 }
@@ -1771,15 +1773,32 @@ form .button {
 
 @media (max-width: 620px) {
   .couple-hero {
-    min-height: 450px;
+    min-height: 530px;
+    padding: 72px 18px 40px;
   }
 
   .hero-names {
-    font-size: clamp(80px, 18vw, 106px);
+    margin: 25px 0 23px;
+    font-size: clamp(86px, 19vw, 116px);
   }
 
   .hero-date {
-    font-size: 24px;
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  .hero-date-caption {
+    font-size: 19px;
+  }
+
+  .intro-kicker {
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+
+  .intro-date {
+    margin: 22px 0 34px;
+    font-size: 18px;
   }
 
   .invitation-page {
