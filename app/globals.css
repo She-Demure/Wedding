@@ -1032,7 +1032,7 @@ footer i {
   background: linear-gradient(145deg, rgba(255, 253, 248, 0.82), rgba(241, 232, 215, 0.74));
   box-shadow: 0 12px 28px rgba(88, 64, 36, 0.09), inset 0 0 0 4px rgba(255, 255, 255, 0.28);
   color: #6a553b;
-  font-size: 20px;
+  font-size: 23px;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
@@ -1043,7 +1043,12 @@ footer i {
 
 .sponsor-pair span + span {
   color: #816b4d;
-  font-style: italic;
+  font-style: normal;
+}
+
+.sponsor-pair span {
+  width: 100%;
+  text-align: center;
 }
 
 .sponsor-caption {
@@ -1064,7 +1069,7 @@ footer i {
   .sponsor-pair {
     min-height: 160px;
     padding: 28px 18px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
