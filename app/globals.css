@@ -888,12 +888,9 @@ footer i {
 }
 
 .timeline-layout {
-  display: grid;
-  max-width: 980px;
+  display: block;
+  max-width: 860px;
   margin: 72px auto 0;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
-  align-items: center;
-  gap: 42px;
 }
 
 .timeline {
@@ -1018,33 +1015,6 @@ footer i {
   border-color: #98713a;
   background: #a47f48;
   color: #fffaf1;
-}
-
-.timeline-photo {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(167, 126, 74, 0.42);
-  border-radius: 6px;
-  background: #f8f3e8;
-  box-shadow: 0 18px 40px rgba(88, 64, 36, 0.15);
-}
-
-.timeline-photo::after {
-  position: absolute;
-  inset: 0;
-  border: 7px solid rgba(255, 252, 244, 0.42);
-  content: "";
-  pointer-events: none;
-}
-
-.timeline-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .details-section {
@@ -2069,14 +2039,7 @@ form .button {
   }
 
   .timeline-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 30px;
     margin-top: 58px;
-  }
-
-  .timeline-photo {
-    height: clamp(220px, 58vw, 330px);
-    margin-top: 8px;
   }
 
   .timeline article {

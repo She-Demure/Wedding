@@ -131,9 +131,6 @@ export default function App() {
                 </div>
               </article>
             </div>
-            <figure className="timeline-photo">
-              <img src="/wedding-rings.jpg" alt="Gold wedding rings arranged with ivory roses and pearls" />
-            </figure>
           </div>
           <div className="venue-buttons">
             <a className="venue-link" href="https://maps.app.goo.gl/f71kckEpfAWUGkT68" target="_blank" rel="noreferrer">View wedding venue <span>↗</span></a>
