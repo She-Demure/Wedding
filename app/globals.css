@@ -738,7 +738,7 @@ footer i {
 
 .wedding-countdown {
   display: flex;
-  margin: 16px 0 8px;
+  margin: 24px 0 16px;
   align-items: flex-start;
   justify-content: center;
   gap: clamp(8px, 2vw, 20px);
