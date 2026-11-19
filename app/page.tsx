@@ -188,6 +188,7 @@ export default function App() {
             if (isOpening && event.currentTarget === event.target) setIntroVisible(false);
           }}
         >
+          <div className="intro-background" aria-hidden="true" />
           <div className="intro-content">
             <p className="intro-kicker">You are invited</p>
             <button

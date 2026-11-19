@@ -1400,13 +1400,24 @@ footer i {
   display: grid;
   overflow: hidden;
   place-items: center;
+  background: #f1e7d7;
+}
+
+.intro-background {
+  position: absolute;
+  z-index: 0;
+  inset: -14px;
   background:
     linear-gradient(rgba(248, 241, 226, 0.4), rgba(233, 218, 191, 0.46)),
     url("/wedding-rings.jpg") center / cover no-repeat;
+  filter: blur(7px);
+  transform: scale(1.035);
+  pointer-events: none;
 }
 
 .invitation-intro::before {
   position: absolute;
+  z-index: 2;
   inset: 20px;
   border: 1px solid rgba(255, 248, 229, 0.56);
   content: "";
@@ -1415,10 +1426,25 @@ footer i {
 
 .invitation-intro::after {
   position: absolute;
+  z-index: 2;
   inset: 28px;
   border: 1px solid rgba(129, 92, 49, 0.26);
   content: "";
   pointer-events: none;
+}
+
+body:has(.invitation-intro) {
+  overflow: hidden;
+}
+
+body:has(.invitation-intro) .invitation-page {
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body:has(.invitation-intro) .scroll-progress {
+  display: none;
 }
 
 .intro-opening {
