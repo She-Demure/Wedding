@@ -658,7 +658,7 @@ footer i {
 }
 
 .couple-hero > .section-kicker {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-size: 20px;
   letter-spacing: 0.34em;
 }
@@ -685,7 +685,7 @@ footer i {
 
 .hero-names {
   display: flex;
-  margin: 40px 0 38px;
+  margin: 12px 0 30px;
   align-items: center;
   flex-direction: column;
   color: #b18a4b;
@@ -697,7 +697,7 @@ footer i {
 }
 
 .hero-names i {
-  margin: 24px 0 20px;
+  margin: 8px 0 6px;
   color: #a68759;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 52px;
@@ -1981,12 +1981,12 @@ form .button {
   }
 
   .couple-hero > .section-kicker {
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     font-size: 16px;
   }
 
   .hero-names {
-    margin: 32px 0 30px;
+    margin: 10px 0 24px;
     font-size: clamp(98px, 21vw, 130px);
   }
 
