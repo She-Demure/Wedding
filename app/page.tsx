@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring, useTransform, type MotionValue } from "motion/react";
 
 const floralImage =
@@ -89,6 +89,25 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false);
   const [introVisible, setIntroVisible] = useState(true);
   const [isOpening, setIsOpening] = useState(false);
+  const [countdown, setCountdown] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
+
+  useEffect(() => {
+    const weddingStart = new Date("2026-11-26T10:30:00+08:00").getTime();
+    const updateCountdown = () => {
+      const remaining = Math.max(0, weddingStart - Date.now());
+      const totalSeconds = Math.floor(remaining / 1000);
+      setCountdown({
+        days: Math.floor(totalSeconds / 86400),
+        hours: Math.floor((totalSeconds % 86400) / 3600),
+        minutes: Math.floor((totalSeconds % 3600) / 60),
+        seconds: totalSeconds % 60,
+      });
+    };
+
+    updateCountdown();
+    const interval = window.setInterval(updateCountdown, 1000);
+    return () => window.clearInterval(interval);
+  }, []);
 
   return (
     <main className="invitation-page">
@@ -101,6 +120,21 @@ export default function App() {
           </button>
           <h1 className="hero-names"><span className="gold-shine">Sheila Marie</span><i>&amp;</i><span className="gold-shine">Mark Joel</span></h1>
           <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
+          {countdown && (
+            <div className="wedding-countdown" aria-label={`${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, and ${countdown.seconds} seconds until the wedding`}>
+              {[
+                [countdown.days, "Days"],
+                [countdown.hours, "Hours"],
+                [countdown.minutes, "Minutes"],
+                [countdown.seconds, "Seconds"],
+              ].map(([value, label]) => (
+                <div className="countdown-unit" key={label}>
+                  <strong>{String(value).padStart(2, "0")}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
+          )}
           <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
           <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
         </section>
