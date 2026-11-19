@@ -76,49 +76,40 @@ export default function App() {
 
         <section className="schedule-section" aria-labelledby="schedule-title">
           <div className="section-heading">
-            <p className="section-kicker">Order of celebration</p>
-            <h2 id="schedule-title">The Wedding Day</h2>
-            <p>Sunday, the twenty-first of June</p>
+            <h2 id="schedule-title">Wedding Day Timeline</h2>
           </div>
           <div className="timeline">
             <article>
-              <span>03:30</span>
+              <span>10:30 AM</span>
               <div className="timeline-mark">
                 <i />
               </div>
               <div>
-                <h3>Guest Arrival</h3>
-                <p>Welcome drinks in the courtyard</p>
+                <h3>Guest Arrival &amp; Registration</h3>
+                <p>Guests arrive at the venue, greet the couple’s families, and settle into their seats in preparation for the ceremony.</p>
+                <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
               </div>
             </article>
             <article>
-              <span>04:00</span>
+              <span>11:00 AM</span>
               <div className="timeline-mark">
                 <i />
               </div>
               <div>
                 <h3>The Ceremony</h3>
-                <p>Exchange of vows in the olive grove</p>
+                <p>The celebration of love begins! Witness the couple exchange their vows and promises of forever as they begin their journey together as husband and wife.</p>
+                <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
               </div>
             </article>
             <article>
-              <span>05:00</span>
+              <span>12:00 NN</span>
               <div className="timeline-mark">
                 <i />
               </div>
               <div>
-                <h3>Cocktail Hour</h3>
-                <p>Champagne and music on the terrace</p>
-              </div>
-            </article>
-            <article>
-              <span>06:30</span>
-              <div className="timeline-mark">
-                <i />
-              </div>
-              <div>
-                <h3>Dinner &amp; Dancing</h3>
-                <p>A candlelit evening beneath the stars</p>
+                <h3>Wedding Reception &amp; Celebration</h3>
+                <p>Join us as we continue the celebration with a delightful meal, heartfelt messages, fun moments, and joyful memories with family and friends.</p>
+                <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
               </div>
             </article>
           </div>

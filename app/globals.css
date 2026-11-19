@@ -844,6 +844,20 @@ footer i {
   font-style: italic;
 }
 
+.timeline .timeline-venue {
+  margin-top: 8px;
+  color: #806849;
+  font-size: 13px;
+  font-style: normal;
+}
+
+.timeline-venue strong {
+  color: #6b5031;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
 .details-section {
   margin-top: 24px;
   padding: 92px 68px 80px;
