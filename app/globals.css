@@ -902,19 +902,18 @@ footer i {
 .timeline article {
   display: grid;
   min-height: 184px;
-  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-columns: 108px 54px minmax(0, 1fr);
   align-items: start;
 }
 
 .timeline-time {
-  display: block;
-  margin: 0 0 8px;
+  padding-top: 4px;
   color: #987344;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  text-align: center;
+  text-align: right;
 }
 
 .timeline-mark {
@@ -961,7 +960,7 @@ footer i {
 
 .timeline article > div:last-child {
   padding-left: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .timeline p {
@@ -2100,7 +2099,7 @@ form .button {
 
   .timeline article {
     min-height: 154px;
-    grid-template-columns: 40px minmax(0, 1fr);
+    grid-template-columns: 72px 40px minmax(0, 1fr);
   }
 
   .timeline-time {
@@ -2186,7 +2185,7 @@ form .button {
 
   .timeline article {
     min-height: 110px;
-    grid-template-columns: 30px minmax(0, 1fr);
+    grid-template-columns: 56px 30px minmax(0, 1fr);
   }
 
   .timeline-time {
