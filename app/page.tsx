@@ -95,40 +95,45 @@ export default function App() {
           <div className="section-heading">
             <h2 id="schedule-title">Wedding Day Timeline</h2>
           </div>
-          <div className="timeline">
-            <article>
-              <span>10:30 AM</span>
-              <div className="timeline-mark">
-                <i />
-              </div>
-              <div>
-                <h3>Guest Arrival</h3>
-                <p>Welcome and registration of guests.</p>
-                <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
-              </div>
-            </article>
-            <article>
-              <span>11:00 AM</span>
-              <div className="timeline-mark">
-                <i />
-              </div>
-              <div>
-                <h3>The Ceremony</h3>
-                <p>Witness the couple exchange their vows and say “I do.”</p>
-                <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
-              </div>
-            </article>
-            <article>
-              <span>12:00 NN</span>
-              <div className="timeline-mark">
-                <i />
-              </div>
-              <div>
-                <h3>Wedding Reception</h3>
-                <p>Enjoy a lovely meal and celebrate with the newlyweds!</p>
-                <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
-              </div>
-            </article>
+          <div className="timeline-layout">
+            <div className="timeline">
+              <article>
+                <span>10:30 AM</span>
+                <div className="timeline-mark">
+                  <i />
+                </div>
+                <div>
+                  <h3>Guest Arrival</h3>
+                  <p>Welcome and registration of guests.</p>
+                  <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
+                </div>
+              </article>
+              <article>
+                <span>11:00 AM</span>
+                <div className="timeline-mark">
+                  <i />
+                </div>
+                <div>
+                  <h3>The Ceremony</h3>
+                  <p>Witness the couple exchange their vows and say “I do.”</p>
+                  <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
+                </div>
+              </article>
+              <article>
+                <span>12:00 NN</span>
+                <div className="timeline-mark">
+                  <i />
+                </div>
+                <div>
+                  <h3>Wedding Reception</h3>
+                  <p>Enjoy a lovely meal and celebrate with the newlyweds!</p>
+                  <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
+                </div>
+              </article>
+            </div>
+            <figure className="timeline-photo">
+              <img src="/wedding-rings.jpg" alt="Gold wedding rings arranged with ivory roses and pearls" />
+            </figure>
           </div>
         </section>
 

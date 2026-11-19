@@ -887,14 +887,22 @@ footer i {
   font-style: italic;
 }
 
-.timeline {
-  max-width: 760px;
+.timeline-layout {
+  display: grid;
+  max-width: 980px;
   margin: 72px auto 0;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: 42px;
+}
+
+.timeline {
+  min-width: 0;
 }
 
 .timeline article {
   display: grid;
-  min-height: 148px;
+  min-height: 164px;
   grid-template-columns: 90px 46px 1fr;
   align-items: start;
 }
@@ -903,7 +911,7 @@ footer i {
   padding-top: 4px;
   color: #987344;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-align: right;
@@ -947,7 +955,7 @@ footer i {
 .detail-grid h3 {
   margin: 0;
   color: #604c36;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 500;
 }
 
@@ -958,22 +966,49 @@ footer i {
 .timeline p {
   margin: 4px 0 0;
   color: #7b6954;
-  font-size: 15px;
+  font-size: 17px;
   font-style: italic;
 }
 
 .timeline .timeline-venue {
   margin-top: 8px;
   color: #806849;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
 }
 
 .timeline-venue strong {
   color: #6b5031;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.04em;
+}
+
+.timeline-photo {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(167, 126, 74, 0.42);
+  border-radius: 6px;
+  background: #f8f3e8;
+  box-shadow: 0 18px 40px rgba(88, 64, 36, 0.15);
+}
+
+.timeline-photo::after {
+  position: absolute;
+  inset: 0;
+  border: 7px solid rgba(255, 252, 244, 0.42);
+  content: "";
+  pointer-events: none;
+}
+
+.timeline-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .details-section {
@@ -1994,7 +2029,18 @@ form .button {
   }
 
   .timeline {
+    margin-top: 0;
+  }
+
+  .timeline-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
     margin-top: 58px;
+  }
+
+  .timeline-photo {
+    height: clamp(220px, 58vw, 330px);
+    margin-top: 8px;
   }
 
   .timeline article {
@@ -2007,7 +2053,7 @@ form .button {
   }
 
   .timeline h3 {
-    font-size: 21px;
+    font-size: 23px;
   }
 
   .detail-grid {
@@ -2093,7 +2139,7 @@ form .button {
   }
 
   .timeline p {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
