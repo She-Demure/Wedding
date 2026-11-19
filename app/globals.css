@@ -1019,15 +1019,25 @@ footer i {
 }
 
 .sponsor-pair {
+  position: relative;
   display: flex;
-  padding: 18px 12px;
+  min-height: 126px;
+  padding: 24px 18px;
   align-items: center;
   flex-direction: column;
   gap: 7px;
-  border-top: 1px solid rgba(167, 126, 74, 0.35);
-  border-bottom: 1px solid rgba(167, 126, 74, 0.35);
+  border: 1px solid rgba(167, 126, 74, 0.4);
+  border-radius: 3px;
+  background: linear-gradient(145deg, rgba(255, 253, 248, 0.82), rgba(241, 232, 215, 0.74));
+  box-shadow: 0 12px 28px rgba(88, 64, 36, 0.09), inset 0 0 0 4px rgba(255, 255, 255, 0.28);
   color: #6a553b;
   font-size: 20px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.sponsor-pair:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(88, 64, 36, 0.13), inset 0 0 0 4px rgba(255, 255, 255, 0.34);
 }
 
 .sponsor-pair span + span {
@@ -1051,7 +1061,8 @@ footer i {
   }
 
   .sponsor-pair {
-    padding: 14px 8px;
+    min-height: 112px;
+    padding: 20px 12px;
     font-size: 18px;
   }
 }
