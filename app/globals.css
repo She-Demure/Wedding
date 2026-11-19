@@ -1446,7 +1446,7 @@ footer i {
   margin: 0 0 54px;
   color: #a77d3d;
   font-family: "Great Vibes", "Brush Script MT", cursive;
-  font-size: clamp(72px, 6vw, 96px);
+  font-size: clamp(144px, 12vw, 192px);
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.1;
@@ -1487,8 +1487,8 @@ footer i {
 .seal-button {
   position: relative;
   display: grid;
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
   margin: 0;
   place-items: center;
   border-radius: 50%;
@@ -1527,9 +1527,9 @@ footer i {
 .seal-ring {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 22px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
+  font-size: 96px;
   font-style: italic;
   font-weight: 500;
 }
@@ -1540,23 +1540,23 @@ footer i {
 
 .seal-ring i {
   color: #e3c28c;
-  font-size: 36px;
+  font-size: 72px;
 }
 
 .open-label {
   display: flex;
-  margin-top: 30px;
+  margin-top: 32px;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
   color: #654d31;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: 0.22em;
 }
 
 .open-label span {
   font-family: Georgia, serif;
-  font-size: 14px;
+  font-size: 28px;
   animation: arrow-drift 1.8s ease-in-out infinite;
 }
 
@@ -1922,25 +1922,30 @@ form .button {
 
   .intro-kicker {
     margin-bottom: 34px;
-    font-size: 64px;
+    font-size: 128px;
   }
 
   .seal-button {
-    width: 140px;
-    height: 140px;
+    width: 280px;
+    height: 280px;
   }
 
   .seal-ring {
-    font-size: 42px;
+    font-size: 84px;
   }
 
   .seal-ring i {
-    font-size: 31px;
+    font-size: 62px;
   }
 
   .open-label {
     margin-top: 25px;
-    font-size: 14px;
+    gap: 17px;
+    font-size: 28px;
+  }
+
+  .open-label span {
+    font-size: 24px;
   }
 
   .intro-date {
