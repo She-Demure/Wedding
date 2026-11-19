@@ -58,7 +58,7 @@ export default function App() {
       <ScrollEffects />
 
       <div className="wedding-journey">
-        <section className="story-section scroll-reveal" id="our-story">
+        <section className="story-section" id="our-story">
           <div className="story-image-wrap">
             <div className="story-image">
               <img
@@ -74,7 +74,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="schedule-section scroll-reveal" aria-labelledby="schedule-title">
+        <section className="schedule-section" aria-labelledby="schedule-title">
           <div className="section-heading">
             <p className="section-kicker">Order of celebration</p>
             <h2 id="schedule-title">The Wedding Day</h2>
@@ -124,7 +124,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="details-section scroll-reveal" aria-labelledby="details-title">
+        <section className="details-section" aria-labelledby="details-title">
           <div className="section-heading">
             <p className="section-kicker">The finer details</p>
             <h2 id="details-title">For Our Guests</h2>
@@ -166,7 +166,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="closing-section scroll-reveal">
+        <section className="closing-section">
           <div className="closing-floral" aria-hidden="true">
             <img src={floralImage} alt="" />
           </div>
