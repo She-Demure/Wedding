@@ -19,7 +19,7 @@ function FloatingPetals({ y }: { y: MotionValue<string> }) {
   );
 }
 
-function ScrollEffects({ scene }: { scene: "floral" | "golden-hour" }) {
+function ScrollEffects() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -32,64 +32,36 @@ function ScrollEffects({ scene }: { scene: "floral" | "golden-hour" }) {
     restDelta: 0.001,
   });
   const filter = useTransform(sceneProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
-  const backgroundPalette = scene === "golden-hour"
-    ? ["#f3dfc0", "#e9c7a9", "#d9b5a5", "#b9a99d", "#9da694"]
-    : ["#d7c5aa", "#eadbc2", "#d8d5c7", "#e5cfc2", "#c8c9b5"];
-  const backgroundColor = useTransform(sceneProgress, [0, 0.28, 0.58, 0.82, 1], backgroundPalette);
+  const backgroundColor = useTransform(
+    sceneProgress,
+    [0, 0.28, 0.58, 0.82, 1],
+    ["#d7c5aa", "#eadbc2", "#d8d5c7", "#e5cfc2", "#c8c9b5"],
+  );
   const farLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-20vh"]);
   const middleLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-44vh"]);
   const nearLayerY = useTransform(sceneProgress, [0, 1], ["0vh", "-78vh"]);
   const farLayerOpacity = useTransform(sceneProgress, [0, 0.5, 1], [0.34, 0.24, 0.12]);
-  const skyOpacity = useTransform(sceneProgress, [0, 0.5, 1], [0.2, 0.55, 0.08]);
 
   return (
     <>
       <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
-      <motion.div className={`scroll-decor scene-${scene}`} style={{ filter, backgroundColor }} aria-hidden="true">
-        {scene === "floral" ? (
-          <>
-            <div className="ambient-glow ambient-one" />
-            <div className="ambient-glow ambient-two" />
-            <motion.div className="background-floral background-floral-left" style={{ y: farLayerY, opacity: farLayerOpacity }}>
-              <img src={backgroundFloralImage} alt="" />
-            </motion.div>
-            <motion.div className="background-floral background-floral-right" style={{ y: middleLayerY }}>
-              <img src={backgroundFloralImage} alt="" />
-            </motion.div>
-            <motion.div className="gold-background-effect" style={{ y: farLayerY }} />
-          </>
-        ) : (
-          <>
-            <div className="golden-hour-glow" />
-            <motion.div className="golden-hour-sun" style={{ y: farLayerY }} />
-            <motion.div className="golden-hour-specks" style={{ y: farLayerY, opacity: skyOpacity }} />
-            <motion.svg className="golden-hour-hills" viewBox="0 0 1440 900" preserveAspectRatio="none">
-              <motion.path
-                d="M0 492C154 426 267 447 408 491c127 40 206-38 344-63 144-26 204 38 319 57 127 20 227-8 369-72v487H0Z"
-                fill="#b5aa8f"
-                style={{ y: farLayerY }}
-              />
-              <motion.path
-                d="M0 585c139-70 263-47 383-16 128 33 223 11 344-50 143-72 251-61 386-13 123 43 216 48 327-6v400H0Z"
-                fill="#87907a"
-                style={{ y: middleLayerY }}
-              />
-              <motion.path
-                d="M0 694c156-48 264-16 388 7 128 24 229 6 361-35 152-47 249-13 375 24 113 33 214 30 316-11v221H0Z"
-                fill="#5d6959"
-                style={{ y: nearLayerY }}
-              />
-            </motion.svg>
-            <FloatingPetals y={nearLayerY} />
-          </>
-        )}
+      <motion.div className="scroll-decor" style={{ filter, backgroundColor }} aria-hidden="true">
+        <div className="ambient-glow ambient-one" />
+        <div className="ambient-glow ambient-two" />
+        <motion.div className="background-floral background-floral-left" style={{ y: farLayerY, opacity: farLayerOpacity }}>
+          <img src={backgroundFloralImage} alt="" />
+        </motion.div>
+        <motion.div className="background-floral background-floral-right" style={{ y: middleLayerY }}>
+          <img src={backgroundFloralImage} alt="" />
+        </motion.div>
+        <motion.div className="gold-background-effect" style={{ y: farLayerY }} />
+        <FloatingPetals y={nearLayerY} />
       </motion.div>
     </>
   );
 }
 
 export default function App() {
-  const [scene, setScene] = useState<"floral" | "golden-hour">("floral");
   const [rsvpOpen, setRsvpOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [introVisible, setIntroVisible] = useState(true);
@@ -97,11 +69,7 @@ export default function App() {
 
   return (
     <main className="invitation-page">
-      <ScrollEffects scene={scene} />
-      <div className="scene-toggle" role="group" aria-label="Compare invitation backgrounds">
-        <button className={scene === "floral" ? "scene-selected" : ""} aria-pressed={scene === "floral"} onClick={() => setScene("floral")}>Floral</button>
-        <button className={scene === "golden-hour" ? "scene-selected" : ""} aria-pressed={scene === "golden-hour"} onClick={() => setScene("golden-hour")}>Golden hour</button>
-      </div>
+      <ScrollEffects />
 
       <div className="wedding-journey">
         <section className="story-section" id="our-story">
