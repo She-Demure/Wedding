@@ -34,6 +34,14 @@
     overflow-x: clip;
   }
 
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
   body {
     min-width: 320px;
     min-height: 100vh;
