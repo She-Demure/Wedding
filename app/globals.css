@@ -1002,6 +1002,15 @@ footer i {
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
+.venue-buttons {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .venue-link:hover {
   border-color: #98713a;
   background: #a47f48;

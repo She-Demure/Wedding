@@ -106,7 +106,6 @@ export default function App() {
                   <h3>Guest Arrival</h3>
                   <p>Welcome and registration of guests.</p>
                   <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
-                  <a className="venue-link" href="https://maps.app.goo.gl/f71kckEpfAWUGkT68" target="_blank" rel="noreferrer">View wedding venue <span>↗</span></a>
                 </div>
               </article>
               <article>
@@ -118,7 +117,6 @@ export default function App() {
                   <h3>The Ceremony</h3>
                   <p>Witness the couple exchange their vows and say “I do.”</p>
                   <p className="timeline-venue"><strong>Venue:</strong> 3rd Floor, Mangaladal Municipal Hall</p>
-                  <a className="venue-link" href="https://maps.app.goo.gl/f71kckEpfAWUGkT68" target="_blank" rel="noreferrer">View wedding venue <span>↗</span></a>
                 </div>
               </article>
               <article>
@@ -130,13 +128,16 @@ export default function App() {
                   <h3>Wedding Reception</h3>
                   <p>Enjoy a lovely meal and celebrate with the newlyweds!</p>
                   <p className="timeline-venue"><strong>Venue:</strong> Kalye Tres Restaurant</p>
-                  <a className="venue-link" href="https://maps.app.goo.gl/AkjCkMA5Hxrz2VGR7" target="_blank" rel="noreferrer">View reception venue <span>↗</span></a>
                 </div>
               </article>
             </div>
             <figure className="timeline-photo">
               <img src="/wedding-rings.jpg" alt="Gold wedding rings arranged with ivory roses and pearls" />
             </figure>
+          </div>
+          <div className="venue-buttons">
+            <a className="venue-link" href="https://maps.app.goo.gl/f71kckEpfAWUGkT68" target="_blank" rel="noreferrer">View wedding venue <span>↗</span></a>
+            <a className="venue-link" href="https://maps.app.goo.gl/AkjCkMA5Hxrz2VGR7" target="_blank" rel="noreferrer">View reception venue <span>↗</span></a>
           </div>
         </section>
 
