@@ -889,18 +889,20 @@ footer i {
 
 .timeline-layout {
   display: block;
-  max-width: 860px;
+  max-width: 980px;
   margin: 72px auto 0;
 }
 
 .timeline {
+  max-width: 900px;
+  margin: 0 auto;
   min-width: 0;
 }
 
 .timeline article {
   display: grid;
-  min-height: 164px;
-  grid-template-columns: 90px 46px 1fr;
+  min-height: 184px;
+  grid-template-columns: 108px 54px minmax(0, 1fr);
   align-items: start;
 }
 
@@ -908,7 +910,7 @@ footer i {
   padding-top: 4px;
   color: #987344;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-align: right;
@@ -952,7 +954,7 @@ footer i {
 .detail-grid h3 {
   margin: 0;
   color: #604c36;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -963,21 +965,21 @@ footer i {
 .timeline p {
   margin: 4px 0 0;
   color: #7b6954;
-  font-size: 17px;
+  font-size: 19px;
   font-style: italic;
 }
 
 .timeline .timeline-venue {
   margin-top: 8px;
   color: #806849;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
 }
 
 .timeline-venue strong {
   color: #6b5031;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.04em;
 }
 
@@ -2043,16 +2045,16 @@ form .button {
   }
 
   .timeline article {
-    min-height: 136px;
-    grid-template-columns: 66px 35px 1fr;
+    min-height: 154px;
+    grid-template-columns: 72px 40px minmax(0, 1fr);
   }
 
   .timeline article > span {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .timeline h3 {
-    font-size: 23px;
+    font-size: 25px;
   }
 
   .detail-grid {
@@ -2138,7 +2140,7 @@ form .button {
   }
 
   .timeline p {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
