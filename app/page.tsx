@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { FormEvent } from "react";
 import { motion, useScroll, useSpring, useTransform, type MotionValue } from "motion/react";
 
 const floralImage =
@@ -87,8 +88,39 @@ function ScrollEffects() {
 export default function App() {
   const [rsvpOpen, setRsvpOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [rsvpSubmitting, setRsvpSubmitting] = useState(false);
+  const [rsvpError, setRsvpError] = useState("");
   const [introVisible, setIntroVisible] = useState(true);
   const [isOpening, setIsOpening] = useState(false);
+
+  async function submitRsvp(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setRsvpSubmitting(true);
+    setRsvpError("");
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          attendance: formData.get("attendance"),
+        }),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || "We could not save your reply. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      setRsvpError(error instanceof Error ? error.message : "We could not save your reply. Please try again.");
+    } finally {
+      setRsvpSubmitting(false);
+    }
+  }
   const [countdown, setCountdown] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
@@ -307,12 +339,7 @@ export default function App() {
               <>
                 <h2 id="rsvp-title">Will you join us?</h2>
                 <p>The twenty-sixth of November, 2026.</p>
-                <form
-                  onSubmit={(event) => {
-                    event.preventDefault();
-                    setSubmitted(true);
-                  }}
-                >
+                <form onSubmit={submitRsvp}>
                   <label>
                     Name
                     <input required name="name" placeholder="Your full name" />
@@ -324,8 +351,9 @@ export default function App() {
                       <option value="decline">Regretfully declines</option>
                     </select>
                   </label>
-                  <button className="button button-primary" type="submit">
-                    Send response
+                  {rsvpError && <p className="rsvp-error" role="alert">{rsvpError}</p>}
+                  <button className="button button-primary" type="submit" disabled={rsvpSubmitting}>
+                    {rsvpSubmitting ? "Sending…" : "Send response"}
                   </button>
                 </form>
               </>

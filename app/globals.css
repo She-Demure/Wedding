@@ -1736,6 +1736,13 @@ body:has(.invitation-intro) .scroll-progress {
   font-style: italic;
 }
 
+.rsvp-error {
+  margin: 14px 0 0;
+  color: #9a4239;
+  font-size: 14px;
+  text-align: left;
+}
+
 .modal-kicker {
   margin: 0;
   color: #a07c49;
