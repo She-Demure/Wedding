@@ -630,11 +630,6 @@ footer i {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(255, 249, 236, 0.62);
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.48), transparent 52%),
-    linear-gradient(145deg, rgba(247, 240, 228, 0.94), rgba(232, 219, 198, 0.94));
-  box-shadow: 0 28px 65px rgba(77, 54, 29, 0.14);
   text-align: center;
 }
 
