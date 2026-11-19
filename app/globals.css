@@ -621,6 +621,107 @@ footer i {
   color: #564531;
 }
 
+.couple-hero {
+  position: relative;
+  display: flex;
+  min-height: 430px;
+  margin-bottom: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 249, 236, 0.62);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.48), transparent 52%),
+    linear-gradient(145deg, rgba(247, 240, 228, 0.94), rgba(232, 219, 198, 0.94));
+  box-shadow: 0 28px 65px rgba(77, 54, 29, 0.14);
+  text-align: center;
+}
+
+.couple-hero::before,
+.couple-hero::after {
+  position: absolute;
+  width: min(34vw, 410px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(166, 133, 88, 0.18);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.couple-hero::before {
+  top: -72%;
+  left: -16%;
+  box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.12), 0 0 0 28px rgba(166, 133, 88, 0.05);
+}
+
+.couple-hero::after {
+  right: -16%;
+  bottom: -79%;
+  box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.12), 0 0 0 28px rgba(166, 133, 88, 0.05);
+}
+
+.hero-names {
+  display: flex;
+  margin: 19px 0 17px;
+  align-items: center;
+  flex-direction: column;
+  color: #70583d;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(58px, 8vw, 92px);
+  font-weight: 400;
+  line-height: 0.83;
+}
+
+.hero-names i {
+  margin: 11px 0 8px;
+  color: #a68759;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.hero-ornament {
+  display: flex;
+  width: 148px;
+  align-items: center;
+  gap: 11px;
+  color: #a98756;
+  font-size: 11px;
+}
+
+.hero-ornament span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(160, 128, 78, 0.75));
+}
+
+.hero-ornament span:last-child {
+  transform: scaleX(-1);
+}
+
+.hero-date {
+  margin: 16px 0 0;
+  color: #62503b;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.hero-date i {
+  color: #ae8e5c;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.hero-date-caption {
+  margin: 8px 0 0;
+  color: #8b785d;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .story-section {
   display: grid;
   min-height: 690px;
@@ -1672,6 +1773,18 @@ form .button {
 }
 
 @media (max-width: 620px) {
+  .couple-hero {
+    min-height: 360px;
+  }
+
+  .hero-names {
+    font-size: clamp(56px, 14vw, 76px);
+  }
+
+  .hero-date {
+    font-size: 16px;
+  }
+
   .invitation-page {
     padding: 0;
   }

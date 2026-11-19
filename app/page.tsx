@@ -67,6 +67,14 @@ export default function App() {
       <ScrollEffects />
 
       <div className="wedding-journey">
+        <section className="couple-hero" aria-label="Wedding date for Sheila Marie and Mark Joel">
+          <p className="section-kicker">Save the date</p>
+          <h1 className="hero-names"><span>Sheila Marie</span><i>&amp;</i><span>Mark Joel</span></h1>
+          <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
+          <p className="hero-date">21 <i>·</i> 06 <i>·</i> 2026</p>
+          <p className="hero-date-caption">Sunday · The twenty-first of June</p>
+        </section>
+
         <section className="story-section" id="our-story">
           <div className="story-image-wrap">
             <div className="story-image">
