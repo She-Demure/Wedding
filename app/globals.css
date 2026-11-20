@@ -664,6 +664,7 @@ footer i {
 }
 
 .calendar-save-button {
+  margin-top: 24px;
   padding: 14px 28px;
   border: 1px solid rgba(154, 120, 74, 0.52);
   border-radius: 999px;
@@ -1124,13 +1125,14 @@ footer i {
   padding: 34px 24px;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   gap: 7px;
   border: 1px solid rgba(167, 126, 74, 0.4);
   border-radius: 14px;
   background: linear-gradient(145deg, rgba(255, 253, 248, 0.82), rgba(241, 232, 215, 0.74));
   box-shadow: 0 12px 28px rgba(88, 64, 36, 0.09), inset 0 0 0 4px rgba(255, 255, 255, 0.28);
   color: #6a553b;
-  font-size: 23px;
+  font-size: 27px;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
@@ -1167,7 +1169,7 @@ footer i {
   .sponsor-pair {
     min-height: 160px;
     padding: 28px 18px;
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 
@@ -1523,10 +1525,10 @@ body:has(.invitation-intro) .scroll-progress {
 }
 
 .intro-kicker {
-  margin: 0 0 54px;
+  margin: 0 0 30px;
   color: #a77d3d;
   font-family: "Great Vibes", "Brush Script MT", cursive;
-  font-size: clamp(144px, 12vw, 192px);
+  font-size: clamp(76px, 8vw, 112px);
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.1;
@@ -1567,8 +1569,8 @@ body:has(.invitation-intro) .scroll-progress {
 .seal-button {
   position: relative;
   display: grid;
-  width: 320px;
-  height: 320px;
+  width: 210px;
+  height: 210px;
   margin: 0;
   place-items: center;
   border-radius: 50%;
@@ -1607,9 +1609,9 @@ body:has(.invitation-intro) .scroll-progress {
 .seal-ring {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 14px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 96px;
+  font-size: 66px;
   font-style: italic;
   font-weight: 500;
 }
@@ -1620,23 +1622,23 @@ body:has(.invitation-intro) .scroll-progress {
 
 .seal-ring i {
   color: #e3c28c;
-  font-size: 72px;
+  font-size: 50px;
 }
 
 .open-label {
   display: flex;
-  margin-top: 32px;
+  margin-top: 22px;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   color: #654d31;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.16em;
 }
 
 .open-label span {
   font-family: Georgia, serif;
-  font-size: 28px;
+  font-size: 20px;
   animation: arrow-drift 1.8s ease-in-out infinite;
 }
 
@@ -1990,8 +1992,12 @@ form .button {
   }
 
   .couple-hero > .section-kicker {
-    margin-bottom: 8px;
+    margin-bottom: 0;
     font-size: 16px;
+  }
+
+  .calendar-save-button {
+    margin-top: 20px;
   }
 
   .hero-names {
@@ -2027,31 +2033,32 @@ form .button {
   }
 
   .intro-kicker {
-    margin-bottom: 34px;
-    font-size: 128px;
+    margin-bottom: 24px;
+    font-size: clamp(62px, 11vw, 88px);
   }
 
   .seal-button {
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
   }
 
   .seal-ring {
-    font-size: 84px;
+    gap: 10px;
+    font-size: 56px;
   }
 
   .seal-ring i {
-    font-size: 62px;
+    font-size: 42px;
   }
 
   .open-label {
-    margin-top: 25px;
-    gap: 17px;
-    font-size: 28px;
+    margin-top: 18px;
+    gap: 10px;
+    font-size: 18px;
   }
 
   .open-label span {
-    font-size: 24px;
+    font-size: 17px;
   }
 
   .intro-date {

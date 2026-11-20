@@ -147,9 +147,6 @@ export default function App() {
 
       <div className="wedding-journey">
         <section className="couple-hero" aria-label="Wedding date for Sheila Marie and Mark Joel">
-          <button className="section-kicker calendar-save-button" type="button" onClick={downloadCalendarInvite}>
-            Save the date
-          </button>
           <h1 className="hero-names"><span className="gold-shine">Sheila Marie</span><i>&amp;</i><span className="gold-shine">Mark Joel</span></h1>
           <div className="hero-ornament" aria-hidden="true"><span /><b>✦</b><span /></div>
           {countdown && (
@@ -169,6 +166,9 @@ export default function App() {
           )}
           <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
           <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
+          <button className="section-kicker calendar-save-button" type="button" onClick={downloadCalendarInvite}>
+            Save the date
+          </button>
         </section>
 
         <section className="story-section" id="our-story">
