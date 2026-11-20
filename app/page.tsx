@@ -9,6 +9,7 @@ const floralImage =
 const backgroundFloralImage =
   "https://images.unsplash.com/photo-1651154872716-0f7a409a4dd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHx3aGl0ZSUyMGZsb3dlcnMlMjBnb2xkJTIwd2VkZGluZyUyMGVsZWdhbnQlMjBjcmVhbSUyMGJhY2tncm91bmR8ZW58MXx8fHwxNzk1MDgzNjU2fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const estateImage = "/couple-red-thread.jpg";
+const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?action=TEMPLATE&dates=20261126%2F20261127&text=${encodeURIComponent("Sheila Marie & Mark Joel — Wedding")}&details=${encodeURIComponent("10:30 AM Guest Arrival at 3rd Floor, Mangaladal Municipal Hall\n11:00 AM Wedding Ceremony at 3rd Floor, Mangaladal Municipal Hall\n12:00 NN Wedding Reception at Kalye Tres Restaurant")}&location=${encodeURIComponent("Mangaladal Municipal Hall and Kalye Tres Restaurant")}`;
 
 function FloatingPetals({ y }: { y: MotionValue<string> }) {
   return (
@@ -140,11 +141,15 @@ export default function App() {
           <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
           <a
             className="section-kicker calendar-save-button"
-            href="/api/calendar"
-            download="sheila-marie-mark-joel-wedding.ics"
+            href={googleCalendarUrl}
+            target="_blank"
+            rel="noreferrer"
             aria-label="Save the November 26, 2026 wedding date to your calendar"
           >
             Save the date
+          </a>
+          <a className="calendar-file-link" href="/api/calendar" download="sheila-marie-mark-joel-wedding.ics">
+            Download for Apple Calendar or other apps
           </a>
         </section>
 
