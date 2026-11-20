@@ -35,7 +35,7 @@ function downloadCalendarInvite() {
   document.body.appendChild(link);
   link.click();
   link.remove();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function FloatingPetals({ y }: { y: MotionValue<string> }) {
@@ -166,7 +166,12 @@ export default function App() {
           )}
           <p className="hero-date">26 <i>·</i> 11 <i>·</i> 2026</p>
           <p className="hero-date-caption">Thursday · The twenty-sixth of November</p>
-          <button className="section-kicker calendar-save-button" type="button" onClick={downloadCalendarInvite}>
+          <button
+            className="section-kicker calendar-save-button"
+            type="button"
+            onClick={downloadCalendarInvite}
+            aria-label="Save the November 26, 2026 wedding date to your calendar"
+          >
             Save the date
           </button>
         </section>
