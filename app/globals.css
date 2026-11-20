@@ -664,12 +664,16 @@ footer i {
 }
 
 .calendar-save-button {
+  display: inline-flex;
   margin-top: 38px;
   padding: 14px 28px;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(154, 120, 74, 0.52);
   border-radius: 999px;
   background: rgba(255, 251, 242, 0.34);
   cursor: pointer;
+  text-decoration: none;
   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
