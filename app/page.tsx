@@ -148,9 +148,6 @@ export default function App() {
           >
             Save the date
           </a>
-          <a className="calendar-file-link" href="/api/calendar" download="sheila-marie-mark-joel-wedding.ics">
-            Download for Apple Calendar or other apps
-          </a>
         </section>
 
         <section className="story-section" id="our-story">
