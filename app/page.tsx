@@ -14,7 +14,7 @@ const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?acti
 function FloatingPetals({ y }: { y: MotionValue<string> }) {
   return (
     <motion.div className="petal-field" style={{ y }} aria-hidden="true">
-      {Array.from({ length: 12 }, (_, index) => (
+      {Array.from({ length: 20 }, (_, index) => (
         <i className={`petal petal-${index + 1}`} key={index} />
       ))}
     </motion.div>

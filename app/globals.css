@@ -663,7 +663,7 @@ footer i {
   letter-spacing: 0.34em;
 }
 
-.calendar-save-button {
+.couple-hero > .calendar-save-button {
   display: inline-flex;
   margin-top: 64px;
   padding: 14px 28px;
@@ -1379,13 +1379,13 @@ footer i {
   background: linear-gradient(145deg, rgba(255, 253, 245, 0.9), rgba(201, 176, 140, 0.56));
   box-shadow: 0 2px 6px rgba(92, 63, 31, 0.08);
   opacity: 0;
-  animation: petal-fall 13s linear infinite;
+  animation: petal-fall 30s linear infinite;
 }
 
 .petal-1 {
   left: 4%;
   animation-delay: -2s;
-  animation-duration: 12s;
+  animation-duration: 26s;
 }
 
 .petal-2 {
@@ -1393,13 +1393,13 @@ footer i {
   width: 7px;
   height: 13px;
   animation-delay: -8s;
-  animation-duration: 16s;
+  animation-duration: 30s;
 }
 
 .petal-3 {
   left: 22%;
   animation-delay: -5s;
-  animation-duration: 14s;
+  animation-duration: 27s;
 }
 
 .petal-4 {
@@ -1407,13 +1407,13 @@ footer i {
   width: 8px;
   height: 15px;
   animation-delay: -11s;
-  animation-duration: 17s;
+  animation-duration: 34s;
 }
 
 .petal-5 {
   left: 46%;
   animation-delay: -7s;
-  animation-duration: 15s;
+  animation-duration: 29s;
 }
 
 .petal-6 {
@@ -1421,13 +1421,13 @@ footer i {
   width: 7px;
   height: 13px;
   animation-delay: -1s;
-  animation-duration: 18s;
+  animation-duration: 36s;
 }
 
 .petal-7 {
   left: 66%;
   animation-delay: -10s;
-  animation-duration: 13s;
+  animation-duration: 25s;
 }
 
 .petal-8 {
@@ -1435,13 +1435,13 @@ footer i {
   width: 8px;
   height: 15px;
   animation-delay: -4s;
-  animation-duration: 16s;
+  animation-duration: 32s;
 }
 
 .petal-9 {
   left: 84%;
   animation-delay: -13s;
-  animation-duration: 17s;
+  animation-duration: 35s;
 }
 
 .petal-10 {
@@ -1449,7 +1449,7 @@ footer i {
   width: 7px;
   height: 14px;
   animation-delay: -6s;
-  animation-duration: 14s;
+  animation-duration: 28s;
 }
 
 .petal-11 {
@@ -1457,7 +1457,7 @@ footer i {
   width: 6px;
   height: 11px;
   animation-delay: -15s;
-  animation-duration: 20s;
+  animation-duration: 38s;
 }
 
 .petal-12 {
@@ -1465,7 +1465,71 @@ footer i {
   width: 6px;
   height: 11px;
   animation-delay: -3s;
-  animation-duration: 19s;
+  animation-duration: 33s;
+}
+
+.petal-13 {
+  left: 9%;
+  width: 7px;
+  height: 13px;
+  animation-delay: -18s;
+  animation-duration: 31s;
+}
+
+.petal-14 {
+  left: 19%;
+  width: 6px;
+  height: 12px;
+  animation-delay: -24s;
+  animation-duration: 37s;
+}
+
+.petal-15 {
+  left: 39%;
+  width: 8px;
+  height: 15px;
+  animation-delay: -21s;
+  animation-duration: 30s;
+}
+
+.petal-16 {
+  left: 52%;
+  width: 6px;
+  height: 12px;
+  animation-delay: -27s;
+  animation-duration: 39s;
+}
+
+.petal-17 {
+  left: 62%;
+  width: 7px;
+  height: 14px;
+  animation-delay: -16s;
+  animation-duration: 28s;
+}
+
+.petal-18 {
+  left: 79%;
+  width: 6px;
+  height: 12px;
+  animation-delay: -31s;
+  animation-duration: 36s;
+}
+
+.petal-19 {
+  left: 89%;
+  width: 8px;
+  height: 15px;
+  animation-delay: -22s;
+  animation-duration: 32s;
+}
+
+.petal-20 {
+  left: 97%;
+  width: 6px;
+  height: 11px;
+  animation-delay: -29s;
+  animation-duration: 40s;
 }
 
 .invitation-intro {
@@ -1918,7 +1982,7 @@ form .button {
   }
   100% {
     opacity: 0;
-    transform: translate3d(-25px, 112vh, 0) rotate(500deg);
+    transform: translate3d(-25px, 128vh, 0) rotate(560deg);
   }
 }
 
@@ -2015,7 +2079,7 @@ form .button {
     font-size: 16px;
   }
 
-  .calendar-save-button {
+  .couple-hero > .calendar-save-button {
     margin-top: 32px;
   }
 
@@ -2162,13 +2226,6 @@ form .button {
     margin: 0 0 4px;
   }
 
-  .petal-3,
-  .petal-5,
-  .petal-8,
-  .petal-11 {
-    display: none;
-  }
-
   .story-section {
     min-height: 0;
     grid-template-columns: 1fr;
@@ -2203,8 +2260,12 @@ form .button {
   }
 
   .timeline article {
-    min-height: 154px;
+    min-height: 184px;
     grid-template-columns: 72px 40px minmax(0, 1fr);
+  }
+
+  .venue-buttons {
+    margin-top: 44px;
   }
 
   .timeline-time {
@@ -2289,7 +2350,7 @@ form .button {
   }
 
   .timeline article {
-    min-height: 110px;
+    min-height: 166px;
     grid-template-columns: 56px 30px minmax(0, 1fr);
   }
 
