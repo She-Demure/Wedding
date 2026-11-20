@@ -10,8 +10,8 @@ const calendarInvite = [
   "DTSTART;VALUE=DATE:20261126",
   "DTEND;VALUE=DATE:20261127",
   "SUMMARY:Sheila Marie & Mark Joel — Wedding",
-  "DESCRIPTION:10:30 AM Guest Arrival at 3rd Floor, Mangaladal Municipal Hall\\n11:00 AM Wedding Ceremony at 3rd Floor, Mangaladal Municipal Hall\\n12:00 NN Wedding Reception at Kalye Tres Restaurant",
-  "LOCATION:Mangaladal Municipal Hall and Kalye Tres Restaurant",
+  "DESCRIPTION:10:30 AM Guest Arrival at 3rd Floor, Mangaldan Municipal Hall\\n11:00 AM Wedding Ceremony at 3rd Floor, Mangaldan Municipal Hall\\n12:00 NN Wedding Reception at Kalye Tres Restaurant",
+  "LOCATION:Mangaldan Municipal Hall and Kalye Tres Restaurant",
   "END:VEVENT",
   "END:VCALENDAR",
 ].join("\r\n");
